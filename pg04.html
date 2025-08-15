@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tele-Geriatric Research Fellowship | Advancing Elder Care Through Technology</title>
+    <style>
+        :root {
+            --primary: #2c7be5;
+            --secondary: #6c757d;
+            --accent1: #00d97e;
+            --accent2: #f6c343;
+            --dark: #12263f;
+            --light: #f9fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: var(--primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            background-color: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent1);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent1);
+            margin: 1rem auto 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .stats {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent2);
+        }
+        
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent1);
+            opacity: 0.2;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Policy Page Styles */
+        .policy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .policy-content h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+        
+        .policy-content h3 {
+            color: var(--dark);
+            margin-top: 1.5rem;
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* News & Events Styles */
+        .event-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .event-date {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .event-date .month {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .event-date .day {
+            font-size: 2rem;
+            line-height: 1;
+        }
+        
+        .event-details h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .event-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Tele-Geriatric Research Fellowship</div>
+            <div class="tagline">Bridging Technology and Elder Care Through Innovative Research</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content Area - This would change for each page -->
+    <main class="section">
+        <div class="container">
+            <!-- Privacy Policy Page Content -->
+            <article class="policy-content">
+                <h1>Privacy Policy</h1>
+                <p><em>Last Updated: January 1, 2023</em></p>
+                
+                <p>The Tele-Geriatric Research Fellowship ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+                
+                <h2>Information We Collect</h2>
+                
+                <h3>Personal Data</h3>
+                <p>We may collect personally identifiable information that you voluntarily provide to us when you apply for the fellowship, register for events, or contact us, including:</p>
+                <ul>
+                    <li>Name and contact information (email, phone, address)</li>
+                    <li>Professional credentials and employment history</li>
+                    <li>Academic records and research interests</li>
+                    <li>Demographic information</li>
+                </ul>
+                
+                <h3>Derivative Data</h3>
+                <p>Information our servers automatically collect when you access the website, such as your IP address, browser type, operating system, access times, and pages viewed.</p>
+                
+                <h2>Use of Your Information</h2>
+                <p>We may use information collected about you to:</p>
+                <ul>
+                    <li>Process fellowship applications</li>
+                    <li>Respond to inquiries and provide support</li>
+                    <li>Improve our website and fellowship program</li>
+                    <li>Send administrative information and program updates</li>
+                    <li>Conduct research and analysis</li>
+                    <li>Prevent fraudulent activities and ensure security</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+                
+                <h2>Disclosure of Your Information</h2>
+                <p>We may share information we have collected about you in certain situations:</p>
+                <ul>
+                    <li><strong>With Review Committees:</strong> Your application materials will be shared with our selection committee members.</li>
+                    <li><strong>With Academic Partners:</strong> For fellows who participate in joint programs with our partner institutions.</li>
+                    <li><strong>For Legal Reasons:</strong> If required to do so by law or in response to valid requests by public authorities.</li>
+                </ul>
+                
+                <h2>Tracking Technologies</h2>
+                <p>We may use cookies and similar tracking technologies to access or store information. Most web browsers are set to accept cookies by default, but you can typically modify your browser settings to decline cookies.</p>
+                
+                <h2>Third-Party Websites</h2>
+                <p>Our website may contain links to third-party websites that are not affiliated with us. We are not responsible for the content or privacy practices of those sites.</p>
+                
+                <h2>Security of Your Information</h2>
+                <p>We implement appropriate technical and organizational security measures to protect your personal information. However, no electronic transmission or storage is 100% secure.</p>
+                
+                <h2>Policy for Children</h2>
+                <p>We do not knowingly solicit information from children under 18. If we learn we have collected such information, we will delete it.</p>
+                
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. The updated version will be indicated by a new "Last Updated" date.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, please contact us at:</p>
+                <p>
+                    Tele-Geriatric Research Fellowship<br>
+                    Email: privacy@telegeriatrics.edu<br>
+                    Phone: (555) 123-4567<br>
+                    Address: 123 Medical Innovation Drive, Anytown, ST 12345
+                </p>
+            </article>
+            
+            <!-- Terms of Service Page Content (would be on separate page) -->
+            <!--
+            <article class="policy-content">
+                <h1>Terms of Service</h1>
+                <p><em>Last Updated: January 1, 2023</em></p>
+                [... rest of terms content ...]
+            </article>
+            -->
+            
+            <!-- FAQ Page Content (would be on separate page) -->
+            <!--
+            <h1 class="section-title">Frequently Asked Questions</h1>
+            <div class="faq-item">
+                <div class="faq-question">What are the eligibility requirements for the fellowship?</div>
+                <div class="faq-answer">[... answer ...]</div>
+            </div>
+            [... more FAQ items ...]
+            -->
+            
+            <!-- News & Events Page Content (would be on separate page) -->
+            <!--
+            <h1 class="section-title">News & Events</h1>
+            <div class="event-card">
+                <div class="event-date">
+                    <div class="month">MAR</div>
+                    <div class="day">15</div>
+                </div>
+                <div class="event-details">
+                    <h3>Annual Tele-Geriatrics Symposium</h3>
+                    <p>Join us for our flagship event featuring keynote speakers, research presentations, and networking opportunities for professionals in tele-geriatrics.</p>
+                    <a href="#" class="btn">Register Now</a>
+                </div>
+            </div>
+            [... more events ...]
+            -->
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="accessibility.html">Accessibility</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p class="copyright">© 2023 Tele-Geriatric Research Fellowship. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
